@@ -123,13 +123,14 @@ def main():
                              'the required vram. If you want to disable mixed precision you can set this flag. Note '
                              'that yhis is not recommended (mixed precision is ~2x faster!)')
 
-    sys.argv = [r'predict.py',
-                "-i", r".\Data\nnUNet_raw_data_base\nnUNet_raw_data\Task027_ACDC\ImageTs",
-                "-o", r".\Data\nnUNet_raw_data_base\nnUNet_raw_data\Task027_ACDC\imagesTsPred",
-                "-t", "Task27_ACDC",
-                "-tr", "nnUNetTrainer",
-                "-m", "2d"]
 
+    sys.argv = [r'D:\XiaohanYuan\nnUnet\nnUNet\nnunet\inference\predict_simple.py',
+                "-i", r"D:\XiaohanYuan\nnUnet\nnUNet\nnunet\Data\nnUNet_raw_data_base\nnUNet_raw_data\output\ImageTs",
+                "-o", r"D:\XiaohanYuan\nnUnet\nnUNet\nnunet\Data\nnUNet_raw_data_base\nnUNet_raw_data\output\ImagesTsPred",
+                "-t", "Task027_ACDC",
+                "-tr", "nnUNetTrainerV2",
+                "-f", "all",
+                "-m", "2d"]
     args = parser.parse_args()
     input_folder = args.input_folder
     output_folder = args.output_folder
