@@ -64,10 +64,10 @@ def generate_dataset_json(output_file: str, imagesTr_dir: str, imagesTs_dir: str
     json_dict['numTraining'] = len(train_identifiers)
     json_dict['numTest'] = len(test_identifiers)
     json_dict['training'] = [
-        {'image': "./imagesTr/%s.nii.gz" % i, "label": "./labelsTr/%s.nii.gz" % i} for i
+        {'image': ".\\imagesTr\\%s.nii.gz" % i, "label": ".\\labelsTr\\%s.nii.gz" % i} for i
         in
         train_identifiers]
-    json_dict['test'] = ["./imagesTs/%s.nii.gz" % i for i in test_identifiers]
+    json_dict['test'] = [".\\imagesTs\\%s.nii.gz" % i for i in test_identifiers]
 
     if not output_file.endswith("dataset.json"):
         print("WARNING: output file name is not dataset.json! This may be intentional or not. You decide. "

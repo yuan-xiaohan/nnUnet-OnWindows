@@ -124,13 +124,14 @@ def main():
                              'that yhis is not recommended (mixed precision is ~2x faster!)')
 
 
-    sys.argv = [r'D:\XiaohanYuan\nnUnet\nnUNet\nnunet\inference\predict_simple.py',
-                "-i", r"D:\XiaohanYuan\nnUnet\nnUNet\nnunet\Data\nnUNet_raw_data_base\nnUNet_raw_data\output\ImageTs",
-                "-o", r"D:\XiaohanYuan\nnUnet\nnUNet\nnunet\Data\nnUNet_raw_data_base\nnUNet_raw_data\output\ImagesTsPred",
-                "-t", "Task027_ACDC",
+    sys.argv = [r'predict_simple.py',
+                "-i", r"D:\XiaohanYuan\nnUnet_OnWindows\nnunet\Data\nnUNet_raw_data_base\nnUNet_raw_data\Task027_ACDC\imagesTs",
+                "-o", r"D:\XiaohanYuan\nnUnet_OnWindows\nnunet\Data\RESULTS_FOLDER\nnUNet\2d\Task999_JSH\nnUNetTrainerV2__nnUNetPlansv2.1\all\pred",
+                "-t", "Task999_JSH",
                 "-tr", "nnUNetTrainerV2",
                 "-f", "all",
-                "-m", "2d"]
+                "-m", "2d",
+                '-chk', "model_best"]
     args = parser.parse_args()
     input_folder = args.input_folder
     output_folder = args.output_folder

@@ -12,7 +12,6 @@
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
 
-
 import argparse
 from nnunet.common import *
 from nnunet.run.default_configuration import get_default_configuration
@@ -96,7 +95,7 @@ def main():
                 "2d",
                 "nnUNetTrainerV2",
                 "Task027_ACDC",
-                "0",
+                "all",
                 "--npz"
                 ]
     args = parser.parse_args()

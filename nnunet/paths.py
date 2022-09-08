@@ -28,8 +28,9 @@ PLEASE READ paths.md FOR INFORMATION TO HOW TO SET THIS UP
 """
 
 # Change the environment variable to your own path:
-current_directory = os.getcwd()
-base = join(current_directory, "Data\\UNet_raw_data_base")
+# current_directory = os.getcwd()
+current_directory = r"D:\XiaohanYuan\nnUnet_OnWindows\nnunet"
+base = join(current_directory, "Data\\nnUNet_raw_data_base")
 preprocessing_output_dir = join(current_directory, "Data\\nnUNet_preprocessed")
 network_training_output_dir_base = join(current_directory, "Data\\RESULTS_FOLDER")
 # base = os.environ['nnUNet_raw_data_base'] if "nnUNet_raw_data_base" in os.environ.keys() else None
