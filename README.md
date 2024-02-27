@@ -26,6 +26,8 @@ Change you paths and it can create a folder names "Data".
 
 nnU-Net expects datasets in a structured format. 
 
+You should move splits_final.pkl to nnUNet_preprocessed fold for training.
+
 ### 3.Run nnUNet_plan_and_preprocess.py in "experiment_planning"
 
 To create subfolders with preprocessed data for the 2D U-Net as well as all applicable 3D U-Nets.
@@ -35,5 +37,11 @@ To create subfolders with preprocessed data for the 2D U-Net as well as all appl
 To start training.
 
 ### 5.Run predict_simple.py in "inference"
+
+## Issue
+1. RuntimeError: CUDA out of memory. 
+
+Solution: Adjust the batch_size yourself in nnunet/experience_planning/change_batch_size.py
+
 
 
